@@ -4,272 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Tu Nombre] - Ilustrador/a</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    
+    <style>
+        /* VARIABLES DE COLOR */
+        :root {
+            --color-morado: #6a11cb;
+            --color-naranja: #ff6e40;
+            --color-fondo: #f4f4f9;
+            --color-blanco: #ffffff;
+            --color-texto: #333333;
+            --gradiente-principal: linear-gradient(135deg, var(--color-morado) 0%, var(--color-naranja) 100%);
+        }
+
+        /* ESTILOS GENERALES */
+        html {
+            scroll-behavior: smooth; /* Para el desplazamiento suave del menú */
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--gradiente-principal);
+            color: var(--color-blanco);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: var(--color-blanco);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--color-blanco);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h1, h2, h3 {
+            color: var(--color-morado);
+            text-align: center;
+        }
+
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; margin-bottom: 2rem; }
+        h3 { font-size: 1.5em; text-align: left; }
+
+        button {
+            background: var(--gradiente-principal);
+            color: var(--color-blanco);
+            border: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        /* --- ESTILOS ESPECÍFICOS --- */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: none;
+            box-shadow: none;
+        }
+        .hero h1 {
+            background: var(--gradiente-principal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--color-texto);
+        }
+
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .proyecto-card {
+            background-color: var(--color-fondo);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .proyecto-card h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .categoria {
+            font-weight: bold;
+            color: var(--color-naranja);
+        }
+
+        .proceso-pasos .paso {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: var(--color-fondo);
+            border-left: 5px solid var(--color-morado);
+        }
+        
+        .info-personal {
+            text-align: center;
+        }
+        .datos-contacto {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .datos-contacto a {
+            color: var(--color-naranja);
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">INICIO</a></li>
-                <li><a href="proyectos.html">PROYECTOS</a></li>
-                <li><a href="comisiones.html">COMISIONES</a></li>
-                <li><a href="informacion.html">INFORMACIÓN</a></li>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#comisiones">COMISIONES</a></li>
+                <li><a href="#informacion">INFORMACIÓN</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>¡Hola! Soy [Tu Nombre],</h1>
-            <h2>Ilustrador/a y contador/a de historias visuales.</h2>
+        <section id="inicio" class="hero">
+            <h1>¡Hola! Soy [Tu Nombre]</h1>
+            <p>Ilustrador/a y contador/a de historias visuales.</p>
         </section>
 
-        <section class="accesos-directos">
-            <div class="bloque-acceso" onclick="window.location.href='proyectos.html'">
-                <img src="img/proyecto_miniatura.jpg" alt="Imagen de Proyecto">
-                <h3>Mis Proyectos</h3>
-                <p>Una selección de mis trabajos de ilustración para clientes y proyectos personales.</p>
-                <button>Ver Portafolio</button>
-            </div>
-            <div class="bloque-acceso" onclick="window.location.href='comisiones.html'">
-                <img src="img/comision_miniatura.jpg" alt="Ejemplo de Comisión">
-                <h3>¿Quieres una ilustración única?</h3>
-                <p>Información, precios y proceso para encargar una pieza personalizada.</p>
-                <button>Encargar Comisión</button>
-            </div>
-            <div class="bloque-acceso" onclick="window.location.href='informacion.html'">
-                <img src="img/autorretrato_miniatura.jpg" alt="Mi Foto">
-                <h3>Sobre Mí</h3>
-                <p>Conoce más sobre mi trayectoria, mi proceso creativo y cómo contactarme.</p>
-                <button>Saber Más</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - [Tu Nombre]</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="proyectos.html" class="active">PROYECTOS</a></li>
-                <li><a href="comisiones.html">COMISIONES</a></li>
-                <li><a href="informacion.html">INFORMACIÓN</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="portafolio">
-            <h1>Proyectos Destacados</h1>
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
             <div class="grid-proyectos">
-                <div class="proyecto">
-                    <a href="#"> <img src="img/proyecto1.jpg" alt="Proyecto 1">
-                        <div class="info-proyecto">
-                           <h3>Título del Proyecto 1</h3>
-                           <p class="categoria">Editorial</p>
-                        </div>
-                    </a>
+                <div class="proyecto-card">
+                    <h3>Título del Proyecto 1</h3>
+                    <p class="categoria">Editorial</p>
                 </div>
-                <div class="proyecto">
-                    <a href="#">
-                        <img src="img/proyecto2.jpg" alt="Proyecto 2">
-                        <div class="info-proyecto">
-                            <h3>Título del Proyecto 2</h3>
-                            <p class="categoria">Diseño de Personajes</p>
-                        </div>
-                    </a>
+                <div class="proyecto-card">
+                    <h3>Título del Proyecto 2</h3>
+                    <p class="categoria">Diseño de Personajes</p>
                 </div>
-                 <div class="proyecto">
-                    <a href="#">
-                        <img src="img/proyecto3.jpg" alt="Proyecto 3">
-                        <div class="info-proyecto">
-                            <h3>Título del Proyecto 3</h3>
-                            <p class="categoria">Publicidad</p>
-                        </div>
-                    </a>
+                <div class="proyecto-card">
+                    <h3>Título del Proyecto 3</h3>
+                    <p class="categoria">Publicidad</p>
                 </div>
-                </div>
+            </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comisiones - [Tu Nombre]</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="proyectos.html">PROYECTOS</a></li>
-                <li><a href="comisiones.html" class="active">COMISIONES</a></li>
-                <li><a href="informacion.html">INFORMACIÓN</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="comisiones-info">
-            <h1>Comisiones Personalizadas</h1>
-
+        <section id="comisiones">
+            <h2>Comisiones Personalizadas</h2>
             <div class="proceso-pasos">
-                <h2>¿Cómo funciona?</h2>
-                <div class="paso">
-                    <h3>Paso 1: Contacto</h3>
-                    <p>Cuéntame tu idea. Necesitaré saber el tipo de ilustración, tamaño, personajes y referencias visuales.</p>
-                </div>
-                <div class="paso">
-                    <h3>Paso 2: Presupuesto y Pago</h3>
-                    <p>Te enviaré un presupuesto detallado. Para empezar, se requiere un pago del 50%.</p>
-                </div>
-                <div class="paso">
-                    <h3>Paso 3: Bocetos y Revisiones</h3>
-                    <p>Te presentaré un boceto para tu aprobación. En esta fase podemos hacer hasta 2 rondas de cambios.</p>
-                </div>
-                <div class="paso">
-                    <h3>Paso 4: Arte Final y Entrega</h3>
-                    <p>Una vez aprobado el boceto, crearé el arte final. Recibirás los archivos en alta resolución (JPG, PNG) por email.</p>
-                </div>
-            </div>
-
-            <div class="tabla-precios">
-                <h2>Precios Orientativos</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Tipo de Ilustración</th>
-                            <th>Descripción</th>
-                            <th>Precio Desde...</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Retrato (busto)</td>
-                            <td>1 personaje, fondo simple</td>
-                            <td>$XX</td>
-                        </tr>
-                        <tr>
-                            <td>Personaje completo</td>
-                            <td>1 personaje, fondo simple</td>
-                            <td>$XX</td>
-                        </tr>
-                        <tr>
-                            <td>Escena Completa</td>
-                            <td>+1 personaje y fondo detallado</td>
-                            <td>$XXX</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="nota">Estos precios son orientativos y pueden variar según la complejidad del proyecto.</p>
-            </div>
-
-            <div class="formulario-comision">
-                <h2>¡Hablemos de tu proyecto!</h2>
-                <form action="#" method="post"> <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tipo_comision">Tipo de Comisión:</label>
-                        <select id="tipo_comision" name="tipo_comision">
-                            <option value="retrato">Retrato</option>
-                            <option value="personaje">Personaje Completo</option>
-                            <option value="escena">Escena Completa</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="descripcion">Describe tu idea:</label>
-                        <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
+                <h3>¿Cómo funciona?</h3>
+                <div class="paso"><strong>Paso 1: Contacto.</strong> Cuéntame tu idea. Necesitaré saber el tipo de ilustración, tamaño y referencias.</div>
+                <div class="paso"><strong>Paso 2: Presupuesto y Pago.</strong> Te enviaré un presupuesto. Para empezar, se requiere un pago del 50%.</div>
+                <div class="paso"><strong>Paso 3: Bocetos y Revisiones.</strong> Te presentaré un boceto para tu aprobación.</div>
+                <div class="paso"><strong>Paso 4: Arte Final y Entrega.</strong> Recibirás los archivos en alta resolución por email.</div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información - [Tu Nombre]</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="proyectos.html">PROYECTOS</a></li>
-                <li><a href="comisiones.html">COMISIONES</a></li>
-                <li><a href="informacion.html" class="active">INFORMACIÓN</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="sobre-mi">
-            <h1>Sobre Mí</h1>
+        <section id="informacion">
+            <h2>Sobre Mí</h2>
             <div class="info-personal">
-                <img src="img/autorretrato.jpg" alt="Mi Autorretrato">
-                <p>¡Hola! Soy [Tu Nombre], un ilustrador/a apasionado/a por [menciona tus intereses o estilo principal]. Desde [menciona desde cuándo dibujas o tu experiencia], he dedicado mi tiempo a crear mundos visuales y personajes memorables. Mi proceso creativo se basa en [describe brevemente tu proceso, herramientas, etc.]. Me inspira [menciona tus inspiraciones].</p>
+                <p>¡Hola! Soy [Tu Nombre], un ilustrador/a apasionado/a por [menciona tus intereses]. Mi proceso creativo se basa en [describe brevemente tu proceso].</p>
             </div>
-        </section>
-
-        <section class="contacto">
-            <h2>Contacto</h2>
             <div class="datos-contacto">
-                <p><strong>Email:</strong> <a href="mailto:tuemail@email.com">tuemail@email.com</a></p>
-                <div class="redes-sociales">
-                    <p><strong>Sígueme:</strong></p>
-                    <a href="https://www.instagram.com/tu_usuario" target="_blank">Instagram</a>
-                    <a href="https://www.behance.net/tu_usuario" target="_blank">Behance</a>
-                </div>
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:tuemail@email.com">tuemail@email.com</a></p>
+                <p>Sígueme: <a href="#">Instagram</a> | <a href="#">Behance</a></p>
             </div>
         </section>
     </main>
@@ -277,332 +236,11 @@
     <footer>
         <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
     </footer>
-    <script src="js/script.js"></script>
+
+    <script>
+        // No se necesita JavaScript por ahora para que funcione la base.
+        // Lo dejaremos vacío para mantenerlo simple.
+    </script>
+
 </body>
 </html>
-
-
-
-/* VARIABLES DE COLOR */
-:root {
-    --color-morado: #6a11cb;
-    --color-naranja: #ff6e40;
-    --color-fondo: #f4f4f9;
-    --color-blanco: #ffffff;
-    --color-texto: #333333;
-    --gradiente-principal: linear-gradient(135deg, var(--color-morado) 0%, var(--color-naranja) 100%);
-}
-
-/* ESTILOS GENERALES */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-header {
-    background: var(--gradiente-principal);
-    color: var(--color-blanco);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-nav ul li a.active {
-    background-color: var(--color-blanco);
-    color: var(--color-naranja);
-}
-
-main {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background-color: var(--color-blanco);
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1, h2, h3 {
-    color: var(--color-morado);
-}
-
-button, .button {
-    background: var(--gradiente-principal);
-    color: var(--color-blanco);
-    border: none;
-    padding: 0.8rem 1.6rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-button:hover, .button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-}
-
-/* FORMULARIOS */
-.form-group {
-    margin-bottom: 1.5rem;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--color-morado);
-    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
-}
-
-
-/* --- ESTILOS PÁGINA: INICIO (index.html) --- */
-.hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: none;
-    box-shadow: none;
-}
-.hero h1 {
-    font-size: 3rem;
-    background: var(--gradiente-principal);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-}
-.hero h2 {
-    font-size: 1.5rem;
-    color: var(--color-texto);
-    font-weight: normal;
-}
-
-.accesos-directos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 0;
-    background: none;
-    box-shadow: none;
-}
-.bloque-acceso {
-    background-color: var(--color-blanco);
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-.bloque-acceso:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.bloque-acceso img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-
-/* --- ESTILOS PÁGINA: PROYECTOS (proyectos.html) --- */
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-.proyecto {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
-.proyecto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.proyecto img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.proyecto .info-proyecto {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    padding: 1rem;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-}
-.proyecto:hover .info-proyecto {
-    transform: translateY(0);
-}
-.proyecto h3 {
-    color: white;
-    margin: 0 0 0.25rem 0;
-}
-.proyecto .categoria {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-.proyecto a { text-decoration: none; }
-
-
-/* --- ESTILOS PÁGINA: COMISIONES (comisiones.html) --- */
-.proceso-pasos .paso {
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 12px;
-    background-color: var(--color-fondo);
-    border-left: 5px solid var(--color-morado);
-}
-.tabla-precios table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-.tabla-precios th, .tabla-precios td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-.tabla-precios th {
-    background-color: var(--color-fondo);
-}
-.tabla-precios .nota {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 1rem;
-}
-
-
-/* --- ESTILOS PÁGINA: INFORMACIÓN (informacion.html) --- */
-.info-personal {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-}
-.info-personal img {
-    max-width: 200px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.info-personal p {
-    flex: 1;
-    min-width: 300px;
-}
-.datos-contacto strong {
-    color: var(--color-morado);
-}
-.redes-sociales a {
-    margin-right: 1rem;
-    color: var(--color-naranja);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-
-// Este script se usa para las animaciones al hacer scroll.
-document.addEventListener('DOMContentLoaded', () => {
-
-    const sections = document.querySelectorAll('section');
-
-    const observerOptions = {
-        root: null, // usa el viewport como el área de observación
-        rootMargin: '0px',
-        threshold: 0.1 // el 10% de la sección debe ser visible
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // El elemento está visible, así que se aplica la animación
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-});
