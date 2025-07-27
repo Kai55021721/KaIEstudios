@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: Cycles | Portafolio de Kai</title>
+
+    <meta name="description" content="Detalles sobre el fan-proyecto 'Cycles', una novela visual con los personajes Leo, Diego y Tanner.">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpg" href="img/favicon.jpg">
+</head>
+<body>
+
+    <div class="project-container">
+        
+        <header class="project-header">
+            <h1>Cycles</h1>
+            <p class="project-subtitle">Un fan-proyecto sobre segundas oportunidades y lazos que perduran.</p>
+            <img src="img/cycles-portada.png" alt="Portada de la novela visual Cycles" class="header-image">
+        </header>
+
+        <main class="project-content">
+
+            <section class="project-summary">
+                <h2>Sinopsis</h2>
+                <p>
+                    Aquí va la descripción de tu proyecto 'Cycles'. Explica la trama principal, el conflicto y el viaje emocional de los personajes.
+                </p>
+            </section>
+
+            <section class="project-features">
+                <h2>Características Principales</h2>
+                <ul>
+                    <li><b>Historia Centrada en los Personajes:</b> Explora las complejas dinámicas entre los protagonistas.</li>
+                    <li><b>Arte Estilizado:</b> Un estilo visual único que da vida al mundo del juego.</li>
+                    <li><b>Narrativa Emotiva:</b> Una trama que toca temas de arrepentimiento, amistad y amor.</li>
+                </ul>
+            </section>
+
+            <section class="project-gallery">
+                <h2>Galería de Arte</h2>
+                <p>Mi trabajo en este proyecto se centró en la creación de los sprites de personaje y CGs clave.</p>
+                
+                <h3 class="gallery-subtitle">CGs (Escenas Clave)</h3>
+                <div class="gallery-grid">
+                    <img src="img/CG/CG_1.webp" alt="CG 1 del proyecto Cycles">
+                    <img src="img/CG/CG_2.webp" alt="CG 2 del proyecto Cycles">
+                    <img src="img/CG/CG_3.webp" alt="CG 3 del proyecto Cycles">
+                    <img src="img/CG/CG_4.webp" alt="CG 4 del proyecto Cycles">
+                </div>
+
+                <h3 class="gallery-subtitle">Diseño de Personajes</h3>
+                <p>Cada personaje cuenta con una serie de expresiones para reflejar su personalidad en la historia.</p>
+
+                <div class="character-grid-container">
+                    
+                    <div class="character-column">
+                        <h4>Leo</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/leo_1.png" id="leo-sprite" alt="Sprite animado de Leo">
+                        </div>
+                    </div>
+                
+                    <div class="character-column">
+                        <h4>Diego</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/diego_1.png" id="diego-sprite" alt="Sprite animado de Diego">
+                        </div>
+                    </div>
+
+                    <div class="character-column">
+                        <h4>Tanner</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/tanner_1.png" id="tanner-sprite" alt="Sprite animado de Tanner">
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+
+            <section class="project-details">
+                <h2>Detalles del Proyecto</h2>
+                <ul>
+                    <li><strong>Mi Rol:</strong> Artista (Sprites y CGs)</li>
+                    <li><strong>Género:</strong> Fanwork, Drama, Boys' Love (BL)</li>
+                    <li><strong>Herramientas:</strong> Clip Studio Paint, Photoshop (Arte)</li>
+                </ul>
+            </section>
+
+            <section class="project-cta">
+                <h2>Ver el Proyecto Original</h2>
+                <p>Este es un proyecto de fans. Puedes ver el trabajo original en el siguiente enlace.</p>
+                <a href="https://cyclesfanwork.itch.io/cycles" class="cta-button" target="_blank" rel="noopener noreferrer">Ver en Itch.io</a>
+            </section>
+
+        </main>
+
+        <footer class="project-footer">
+            <a href="index.html" class="back-link">&larr; Volver al Portafolio</a>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Puedes ajustar la velocidad aquí si quieres
+            const TIEMPO_POR_IMAGEN = 800; // 800 milisegundos = 0.8 segundos
+
+            // --- DATOS DE LOS SPRITES ---
+            const leoImages = [
+                'img/SPR/leo_1.png', 'img/SPR/leo_2.png', 'img/SPR/leo_3.png', 'img/SPR/leo_4.png',
+                'img/SPR/leo_5.png', 'img/SPR/leo_6.png', 'img/SPR/leo_7.png', 'img/SPR/leo_8.png',
+                'img/SPR/leo_9.png', 'img/SPR/leo_10.png', 'img/SPR/leo_11.png', 'img/SPR/leo_12.png',
+                'img/SPR/leo_13.png', 'img/SPR/leo_14.png', 'img/SPR/leo_15.png', 'img/SPR/leo_16.png',
+                'img/SPR/leo_17.png', 'img/SPR/leo_18.png', 'img/SPR/leo_19.png', 'img/SPR/leo_20.png', 'img/SPR/leo_21.png'
+            ];
+
+            const diegoImages = [
+                'img/SPR/diego_1.png', 'img/SPR/diego_2.png', 'img/SPR/diego_3.png', 'img/SPR/diego_4.png',
+                'img/SPR/diego_5.png', 'img/SPR/diego_6.png', 'img/SPR/diego_7.png', 'img/SPR/diego_8.png',
+                'img/SPR/diego_9.png', 'img/SPR/diego_10.png', 'img/SPR/diego_11.png', 'img/SPR/diego_12.png', 'img/SPR/diego_13.png'
+            ];
+            
+            const tannerImages = [
+                'img/SPR/tanner_1.png', 'img/SPR/tanner_2.png', 'img/SPR/tanner_3.png', 'img/SPR/tanner_4.png',
+                'img/SPR/tanner_5.png', 'img/SPR/tanner_6.png', 'img/SPR/tanner_7.png', 'img/SPR/tanner_8.png',
+                'img/SPR/tanner_9.png', 'img/SPR/tanner_10.png', 'img/SPR/tanner_11.png', 'img/SPR/tanner_12.png',
+                'img/SPR/tanner_13.png'
+            ];
+
+            // --- LÓGICA DEL SLIDESHOW ---
+            function createSlideshow(elementId, images) {
+                const imageElement = document.getElementById(elementId);
+                if (!imageElement || images.length === 0) return;
+
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    
+                    imageElement.style.opacity = 0.8;
+                    setTimeout(() => {
+                        imageElement.src = images[currentIndex];
+                        imageElement.style.opacity = 1;
+                    }, 150);
+
+                }, TIEMPO_POR_IMAGEN);
+            }
+
+            // Iniciar los slideshows para los personajes de esta página
+            createSlideshow('leo-sprite', leoImages);
+            createSlideshow('diego-sprite', diegoImages);
+            createSlideshow('tanner-sprite', tannerImages);
+        });
+    </script>
+
+</body>
+</html>

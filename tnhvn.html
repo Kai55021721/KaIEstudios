@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: This Never Happened | Portafolio de Kai</title>
+
+    <meta name="description" content="Un vistazo profundo a la novela visual de drama y horror psicológico 'This Never Happened'. Descubre la historia, los personajes y el arte de CGs y sprites.">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpg" href="img/favicon.jpg">
+</head>
+<body>
+
+    <div class="project-container">
+        
+        <header class="project-header">
+            <h1>This Never Happened</h1>
+            <p class="project-subtitle">En un pueblo donde los secretos no mueren, las peores heridas son las de la mente.</p>
+            <img src="img/tnh-portada.png" alt="Portada de la novela visual This Never Happened" class="header-image">
+        </header>
+
+        <main class="project-content">
+
+            <section class="project-summary">
+                <h2>Sinopsis</h2>
+                <p>
+                    La historia sigue a Flynn, quien se encuentra atrapado en una relación tóxica y humillante con Leo, un viejo amigo obsesionado con un amor pasado. Tras un encuentro que lo deja vacío y decepcionado, el destino de Flynn se cruza con el de TJ, un amigo de la infancia que huye de su propio infierno familiar. Juntos, en el opresivo pueblo de Echo, deberán confrontar sus traumas, secretos y los extraños sucesos que los persiguen.
+                </p>
+            </section>
+
+            <section class="project-features">
+                <h2>Características Principales</h2>
+                <ul>
+                    <li><b>Narrativa Intensa y Emotiva:</b> Una historia adulta que explora temas como relaciones tóxicas, traumas, salud mental y la búsqueda de identidad.</li>
+                    <li><b>Arte Detallado:</b> El mundo y los personajes cobran vida a través de CGs de alto impacto y sprites con múltiples expresiones que reflejan cada emoción.</li>
+                    <li><b>Horror Psicológico:</b> Elementos sobrenaturales y una atmósfera de suspenso que desdibujan la línea entre la realidad y las alucinaciones de los personajes.</li>
+                    <li><b>Personajes Complejos:</b> Un elenco de personajes con profundas heridas y motivaciones complejas, cuyas relaciones están en el corazón del drama.</li>
+                </ul>
+            </section>
+
+            <section class="project-gallery">
+                <h2>Galería de Arte (Mi Trabajo)</h2>
+                <p>Mi rol principal fue el de Artista de CGs y Sprites. Mi objetivo fue crear el arte que diera soporte visual y emocional a los momentos más crudos y tiernos de la historia.</p>
+                
+                <h3 class="gallery-subtitle">CGs (Escenas Clave)</h3>
+                <div class="gallery-grid">
+                    <img src="img/CG/flynnyleo_sex.webp" alt="CG de la intensa escena entre Flynn y Leo">
+                    <img src="img/CG/flynncontralapared.webp" alt="CG de Flynn sintiéndose humillado contra la pared">
+                    <img src="img/CG/leoarrepentido.webp" alt="CG de Leo mostrando arrepentimiento">
+                    <img src="img/CG/despiertosnoche.webp" alt="CG de Flynn y TJ conversando en el cuarto por la noche">
+                </div>
+
+                <h3 class="gallery-subtitle">Diseño de Personajes y Expresiones</h3>
+                <p>Cada personaje se muestra en una animación de sus diferentes expresiones y poses.</p>
+
+                <div class="character-grid-container">
+                    
+                    <div class="character-column">
+                        <h4>Flynn</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/Flynn_1.webp" id="flynn-sprite" alt="Sprite animado de Flynn">
+                        </div>
+                    </div>
+                
+                    <div class="character-column">
+                        <h4>TJ</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/tj_1.webp" id="tj-sprite" alt="Sprite animado de TJ">
+                        </div>
+                    </div>
+                
+                    <div class="character-column">
+                        <h4>Daxton</h4>
+                        <div class="sprite-slideshow">
+                            <img src="img/SPR/Daxton_1.webp" id="daxton-sprite" alt="Sprite animado de Daxton">
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+
+            <section class="project-details">
+                <h2>Detalles del Proyecto</h2>
+                <ul>
+                    <li><strong>Mi Rol:</strong> Artista Principal (CGs y Sprites de Personajes)</li>
+                    <li><strong>Género:</strong> Drama, Horror Psicológico, Boys' Love (BL)</li>
+                    <li><strong>Herramientas:</strong> Ren'Py (Motor), Clip Studio Paint (Arte)</li>
+                </ul>
+            </section>
+
+            <section class="project-cta">
+                <h2>Juega la Novela Visual</h2>
+                <p>Puedes descargar y jugar 'This Never Happened' gratis. Se recomienda discreción del espectador por los temas adultos.</p>
+                <a href="https://kai-shitsumon.itch.io/this-never-happened" class="cta-button" target="_blank" rel="noopener noreferrer">Ver en Itch.io</a>
+            </section>
+
+        </main>
+
+        <footer class="project-footer">
+            <a href="index.html" class="back-link">&larr; Volver al Portafolio</a>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CONFIGURACIÓN DE VELOCIDAD ---
+            // Cambia este número para ajustar la velocidad. Más alto = más lento.
+            const TIEMPO_POR_IMAGEN = 800; // 800 milisegundos = 0.8 segundos
+
+            // --- DATOS DE LOS SPRITES ---
+            const flynnImages = [
+                'img/SPR/Flynn_1.webp', 'img/SPR/Flynn_2.webp', 'img/SPR/Flynn_3.webp',
+                'img/SPR/Flynn_4.webp', 'img/SPR/Flynn_5.webp', 'img/SPR/Flynn_6.webp',
+                'img/SPR/Flynn_7.webp', 'img/SPR/Flynn_8.webp', 'img/SPR/Flynn_9.webp', 'img/SPR/Flynn_10.webp'
+            ];
+
+            const tjImages = [
+                'img/SPR/tj_1.webp', 'img/SPR/tj_2.webp', 'img/SPR/tj_3.webp', 'img/SPR/tj_4.webp',
+                'img/SPR/tj_5.webp', 'img/SPR/tj_6.webp', 'img/SPR/tj_7.webp', 'img/SPR/tj_8.webp'
+            ];
+
+            const daxtonImages = [
+                'img/SPR/Daxton_1.webp', 'img/SPR/Daxton_2.webp', 'img/SPR/Daxton_3.webp'
+            ];
+
+            // --- LÓGICA DEL SLIDESHOW ---
+            function createSlideshow(elementId, images) {
+                const imageElement = document.getElementById(elementId);
+                if (!imageElement) return;
+
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    
+                    imageElement.style.opacity = 0.8;
+                    setTimeout(() => {
+                        imageElement.src = images[currentIndex];
+                        imageElement.style.opacity = 1;
+                    }, 150);
+
+                }, TIEMPO_POR_IMAGEN);
+            }
+
+            // Iniciar los slideshows para cada personaje
+            createSlideshow('flynn-sprite', flynnImages);
+            createSlideshow('tj-sprite', tjImages);
+            createSlideshow('daxton-sprite', daxtonImages);
+        });
+    </script>
+
+</body>
+</html>
